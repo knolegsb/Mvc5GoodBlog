@@ -1,0 +1,20 @@
+﻿
+@model Mvc5GoodBlog.Post
+
+<div class="page-header">
+    <article>
+        <h2><a href="@Url.Content("~")@Model.Slug">@Model.Name</a></h2>
+        <p>
+            <small>
+                Category : <a href="@Url.Action("Index", "Category")/@Model.Category.Slug">@Model.Category.Name</a>,
+                by <a href="@Url.Action("Index", "Author")/@Model.UserId">@Model.User.Username</a> on
+                <em>@Model.Created.ToShortDateString()</em>
+            </small>
+        </p>
+        <p>
+            @Html.Markdown((Model.Content.Length <= 450) ? Model.Content : Model.Content.Substring(0, 450) + "...")
+        </p>
+        <p class="text-right"><a href="@Url.Content("~")@Model.Slug" class="btn btn-primary">Read more...</a></p>
+    </article>    
+</div>
+<hr />

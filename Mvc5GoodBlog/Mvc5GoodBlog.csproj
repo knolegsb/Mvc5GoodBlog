@@ -323,8 +323,11 @@
     <Compile Include="Comment.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PostAreaController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\SideBarController.cs" />
     <Compile Include="Filters\CustomAdminMembershipProvider.cs" />
@@ -476,6 +479,17 @@
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Author\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Post.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Comment.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\PostPreview.cshtml" />
+    <Content Include="Views\Shared\_LayoutArea.cshtml" />
+    <Content Include="Views\PostArea\Create.cshtml" />
+    <Content Include="Views\PostArea\Delete.cshtml" />
+    <Content Include="Views\PostArea\Details.cshtml" />
+    <Content Include="Views\PostArea\Edit.cshtml" />
+    <Content Include="Views\PostArea\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611021652520_AddUserProfilesTable.resx">

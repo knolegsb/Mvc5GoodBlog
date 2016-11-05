@@ -44,6 +44,13 @@ namespace Mvc5GoodBlog
                 defaults: new { controller = "Post", action = "Index", id = UrlParameter.Optional },
                 namespaces: new String[] { "Mvc5GoodBlog.Controllers" }
             );
+
+            routes.MapRoute(
+                name: "DefaultArea",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "PostArea", action = "Index", id = UrlParameter.Optional }
+                //namespaces: new String[] { "Mvc5GoodBlog.Controllers" }
+            );
         }
     }
 }

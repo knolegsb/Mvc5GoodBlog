@@ -1,0 +1,16 @@
+﻿@model Mvc5GoodBlog.Post
+
+<div class="page-header">
+    <h1>@Model.Name</h1>
+    <p>
+        <small>
+            Category: <a href="@Url.Action("Index", "Category")/@Model.Category.Slug">@Model.Category.Name</a>,
+            by <a href="@Url.Action("Index", "Author")/@Model.UserId">@Model.User.Username</a> on
+            <em>@Model.Created.ToShortDateString()</em>
+        </small>
+    </p>
+</div>
+<article>
+    @Html.Markdown(Model.Content)
+</article>
+<hr />
